@@ -1,0 +1,11 @@
+$0_global_keystate
+
+$0_note_demux
+
+$0_chord_note_demux
+$0_chord_switch
+$0_reset_chord_list
+
+$0_colorset
+$0_reset_keycolor
+

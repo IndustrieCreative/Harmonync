@@ -1,0 +1,225 @@
+#N canvas 108 22 1144 826 10;
+#X obj 100 119 cnv 15 250 100 empty gui_note-in_label 50 20 50 0 80
+-233017 -66577 0;
+#X floatatom 609 92 5 0 0 3 midi-in_velocity - -;
+#X floatatom 775 90 5 0 0 3 midi-in_channel - -;
+#X floatatom 441 90 5 0 0 3 midi-in_note - -;
+#X obj 441 251 list prepend label;
+#X obj 441 275 list trim;
+#X obj 468 176 list trim;
+#X obj 468 152 list prepend set;
+#X obj 441 125 t b a;
+#X msg 441 203 50;
+#X obj 441 227 l2s;
+#X obj 120 100 cnv 15 140 27 empty empty MIDI_IN_note 5 12 0 18 -1
+-262144 0;
+#X obj 775 251 list prepend label;
+#X obj 775 275 list trim;
+#X obj 802 176 list trim;
+#X obj 802 152 list prepend set;
+#X obj 775 125 t b a;
+#X msg 775 203 1;
+#X obj 775 227 l2s;
+#X obj 280 111 cnv 15 70 40 empty gui_channel_label 1 22 25 0 22 -191407
+-1 0;
+#X obj 285 101 cnv 15 60 20 empty empty CHANNEL 7 10 0 11 -1 -262144
+0;
+#X obj 280 179 cnv 15 70 40 empty gui_velocity_label 0 16 25 0 22 -191407
+-1 0;
+#X obj 285 169 cnv 15 60 20 empty empty VELOCITY 3 10 0 11 -1 -262144
+0;
+#X obj 775 299 send gui_channel_label;
+#X obj 610 251 list prepend label;
+#X obj 610 275 list trim;
+#X obj 637 176 list trim;
+#X obj 637 152 list prepend set;
+#X obj 610 125 t b a;
+#X msg 610 203 0;
+#X obj 610 227 l2s;
+#X obj 610 299 send gui_velocity_label;
+#X obj 100 249 cnv 15 250 100 empty gui_ft-note_label 2 20 50 0 80
+-203904 -66577 0;
+#X obj 109 230 cnv 15 160 27 empty empty FUND.TONE_[ft] 5 12 0 18 -16662
+-262144 0;
+#X obj 280 309 cnv 15 70 40 empty gui_ft-velocity_label 56 16 25 0
+22 -183165 -1 0;
+#X obj 285 299 cnv 15 60 20 empty empty VELOCITY 3 10 0 11 -16662 -262144
+0;
+#X obj 100 378 cnv 15 250 60 empty gui_ft-frequency_label 146.832 20
+30 0 40 -203904 -66577 0;
+#X floatatom 740 392 5 0 0 3 ft_frequency - -;
+#X obj 741 551 list prepend label;
+#X obj 741 597 list trim;
+#X obj 768 476 list trim;
+#X obj 768 452 list prepend set;
+#X obj 741 425 t b a;
+#X obj 741 527 l2s;
+#X obj 742 575 list append Hz;
+#X obj 295 378 cnv 15 55 60 empty empty Hz 5 30 0 40 -203904 -162280
+0;
+#X obj 144 359 cnv 15 160 27 empty empty FUND.FREQUENCY 5 12 0 18 -16662
+-262144 0;
+#X msg 741 502 146.832;
+#X obj 100 469 cnv 15 250 100 empty gui_ht-tone_label 8 20 50 0 80
+-204786 -66577 0;
+#X obj 108 450 cnv 15 160 27 empty empty HARM.TONE_[ht] 5 12 0 18 -13381
+-262144 0;
+#X obj 280 528 cnv 15 70 40 empty gui_ht-velocity_label 0 16 25 0 22
+-192108 -1 0;
+#X obj 285 518 cnv 15 60 20 empty empty VELOCITY 3 10 0 11 -13381 -262144
+0;
+#X obj 441 299 send gui_note-in_label;
+#X floatatom 391 392 5 0 0 3 ft_note - -;
+#X obj 392 551 list prepend label;
+#X obj 392 597 list trim;
+#X obj 419 476 list trim;
+#X obj 419 452 list prepend set;
+#X obj 392 425 t b a;
+#X obj 392 527 l2s;
+#X obj 393 575 list append Hz;
+#X msg 392 502 2;
+#X obj 392 621 send gui_ft-note_label;
+#X obj 575 -15 r gui_midi_in;
+#X obj 575 19 unpack f f f;
+#X obj 587 330 r gui_ft-data;
+#X floatatom 559 394 5 0 0 3 ft_velocity - -;
+#X obj 560 553 list prepend label;
+#X obj 560 599 list trim;
+#X obj 587 478 list trim;
+#X obj 587 454 list prepend set;
+#X obj 560 427 t b a;
+#X obj 560 529 l2s;
+#X obj 561 577 list append Hz;
+#X msg 560 504 56;
+#X obj 560 623 send gui_ft-velocity_label;
+#X obj 741 620 send gui_ft-frequency_label;
+#X text 569 698 midi velocity;
+#X text 951 699 midi note.cent;
+#X text 754 699 midi velocity;
+#X text 397 699 harmonic tone;
+#X obj 392 771 send gui_ht-tone_label;
+#X obj 392 682 r gui_ht-tone;
+#X obj 558 682 r gui_ht-velocity;
+#X obj 558 771 send gui_ht-velocity_label;
+#X obj 100 599 cnv 15 250 60 empty gui_ht-frequency_label 1174.66 20
+30 0 40 -204786 -66577 0;
+#X obj 295 599 cnv 15 55 60 empty empty Hz 5 30 0 40 -204786 -162280
+0;
+#X obj 134 580 cnv 15 185 27 empty empty HARM.FREQUENCY 10 12 0 20
+-13381 -262144 0;
+#X obj 744 683 r gui_ht-frequency;
+#X obj 744 772 send gui_ht-frequency_label;
+#X obj 944 683 r gui_ht-midicent;
+#X obj 279 460 cnv 15 70 40 empty gui_ht-midicent_label 86 4 25 0 15
+-192108 -1 0;
+#X obj 284 450 cnv 15 60 20 empty empty MIDIcent 3 10 0 11 -13381 -262144
+0;
+#X obj 944 770 send gui_ht-midicent_label;
+#X obj 279 240 cnv 15 70 40 empty gui_ft-midicent_label 50 4 25 0 15
+-183165 -1 0;
+#X obj 284 230 cnv 15 60 20 empty empty MIDIcent 3 10 0 11 -16662 -262144
+0;
+#X floatatom 944 389 5 0 0 3 ft_midi_note.cent - -;
+#X obj 945 548 list prepend label;
+#X obj 945 594 list trim;
+#X obj 972 473 list trim;
+#X obj 972 449 list prepend set;
+#X obj 945 422 t b a;
+#X obj 945 524 l2s;
+#X obj 946 572 list append Hz;
+#X msg 945 499 50;
+#X obj 945 620 send gui_ft-midicent_label;
+#X obj 392 731 gui_labeler;
+#X obj 558 731 gui_labeler;
+#X obj 744 731 gui_labeler;
+#X obj 944 731 gui_labeler;
+#X obj 587 364 unpack f f f f;
+#X text 73 730 Copyright 2013-Today by Walter Mantovani;
+#X text 27 756 Licensed under 'GNU Affero General Public License v.3.0'
+;
+#X text 73 743 armonici.it@gmail.com // www.armonici.it;
+#X connect 1 0 28 0;
+#X connect 2 0 16 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 52 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 8 1 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X connect 12 0 13 0;
+#X connect 13 0 23 0;
+#X connect 14 0 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 16 1 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 12 0;
+#X connect 24 0 25 0;
+#X connect 25 0 31 0;
+#X connect 26 0 29 0;
+#X connect 27 0 26 0;
+#X connect 28 0 29 0;
+#X connect 28 1 27 0;
+#X connect 29 0 30 0;
+#X connect 30 0 24 0;
+#X connect 37 0 42 0;
+#X connect 38 0 44 0;
+#X connect 39 0 76 0;
+#X connect 40 0 47 0;
+#X connect 41 0 40 0;
+#X connect 42 0 47 0;
+#X connect 42 1 41 0;
+#X connect 43 0 38 0;
+#X connect 44 0 39 0;
+#X connect 47 0 43 0;
+#X connect 53 0 58 0;
+#X connect 54 0 60 0;
+#X connect 55 0 62 0;
+#X connect 56 0 61 0;
+#X connect 57 0 56 0;
+#X connect 58 0 61 0;
+#X connect 58 1 57 0;
+#X connect 59 0 54 0;
+#X connect 60 0 55 0;
+#X connect 61 0 59 0;
+#X connect 63 0 64 0;
+#X connect 64 0 3 0;
+#X connect 64 1 1 0;
+#X connect 64 2 2 0;
+#X connect 65 0 110 0;
+#X connect 66 0 71 0;
+#X connect 67 0 73 0;
+#X connect 68 0 75 0;
+#X connect 69 0 74 0;
+#X connect 70 0 69 0;
+#X connect 71 0 74 0;
+#X connect 71 1 70 0;
+#X connect 72 0 67 0;
+#X connect 73 0 68 0;
+#X connect 74 0 72 0;
+#X connect 82 0 106 0;
+#X connect 83 0 107 0;
+#X connect 88 0 108 0;
+#X connect 90 0 109 0;
+#X connect 96 0 101 0;
+#X connect 97 0 103 0;
+#X connect 98 0 105 0;
+#X connect 99 0 104 0;
+#X connect 100 0 99 0;
+#X connect 101 0 104 0;
+#X connect 101 1 100 0;
+#X connect 102 0 97 0;
+#X connect 103 0 98 0;
+#X connect 104 0 102 0;
+#X connect 106 0 81 0;
+#X connect 107 0 84 0;
+#X connect 108 0 89 0;
+#X connect 109 0 93 0;
+#X connect 110 0 37 0;
+#X connect 110 1 53 0;
+#X connect 110 2 66 0;
+#X connect 110 3 96 0;
+#X coords 0 -1 1 1 250 560 2 100 100;

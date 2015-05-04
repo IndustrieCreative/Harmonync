@@ -1,0 +1,2 @@
+#N canvas 396 254 151 151 10;
+#X obj 5 5 colorset_gui;

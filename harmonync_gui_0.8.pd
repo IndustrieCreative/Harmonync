@@ -1,0 +1,637 @@
+#N canvas 63 22 873 818 10;
+#X obj -7332 -6733 cnv 15 870 814 empty empty empty 20 12 0 14 -66577
+-66577 0;
+#X obj -7324 -6402 cnv 15 470 80 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj -7228 -6585 cnv 15 505 175 empty empty empty 20 12 0 14 -203904
+-66577 0;
+#X obj -7324 -6725 cnv 15 320 40 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj -6715 -6725 lib/tools/gui_midi-monitor;
+#X obj -7324 -6475 cnv 15 86 65 empty empty empty 20 12 0 14 -162280
+-66577 0;
+#X obj -7297 -6446 vradio 15 1 0 2 gui_int_waveform empty empty 0 -8
+0 10 -262144 -1 -1 0;
+#X obj -7311 -6713 lib/tools/dsp_toggle;
+#X text -7182 -6720 << CLICK TURN ON THE DSP;
+#X text -7182 -6708 << AND INITIALIZE THE PATCH;
+#X obj -7267 -6314 cnv 15 543 10 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X obj -7324 -6255 cnv 15 600 172 empty empty empty 20 12 0 14 -228856
+-1 0;
+#N canvas 266 248 450 300 (subpatch) 0;
+#X array gui-scope 1000 float 0;
+#X coords 0 1 999 -1 260 130 1 0 0;
+#X restore -7311 -6233 graph;
+#X text -7325 -6116 -1;
+#X text -7319 -6174 0;
+#X text -7319 -6233 1;
+#X obj -6872 -6164 cnv 15 410 120 empty empty empty 20 12 0 14 -159808
+-262144 0;
+#X obj -7332 -6092 cnv 15 870 173 empty empty empty 350 12 0 18 -159808
+-261682 0;
+#X obj -6996 -5964 lib/tools/gui_sysex_input_device;
+#X obj -7255 -5971 lib/tools/gui_sysex_input_name;
+#X obj -7126 -5965 lib/tools/gui_sysex_input_program;
+#X obj -7218 -6246 tgl 10 1 empty empty empty 0 -6 0 10 -1 -262144
+-262144 1 1;
+#X obj -6952 -6057 lib/tools/gui_sysex_input_bank;
+#X obj -7318 -6373 bng 16 250 50 0 gui_load_ctrl_map empty empty 22
+9 1 13 -258113 -4034 -13381;
+#X obj -7318 -6351 bng 16 250 50 0 gui_load_inst_map empty empty 22
+9 1 13 -260097 -4034 -13381;
+#X obj -7145 -6376 lib/tools/cnv_label_ctrl;
+#X obj -7145 -6354 lib/tools/cnv_label_inst;
+#X obj -7061 -6525 cnv 15 160 30 empty empty empty 20 12 0 14 -183097
+-66577 0;
+#X obj -7213 -6525 cnv 15 135 30 empty empty empty 20 12 0 14 -183097
+-66577 0;
+#X obj -7077 -6555 vradio 15 1 0 9 gui_ft_mode gui_ft_input_bang empty
+-45 -8 0 10 -262144 -1 -1 0;
+#X text -7094 -6529 >>;
+#X text -7094 -6511 >>;
+#X text -7094 -6483 >>;
+#X text -7094 -6468 >>;
+#X text -7094 -6453 >>;
+#X text -7094 -6437 >>;
+#X obj -6879 -6498 lib/tools/nedx_type_input_unit;
+#X obj -6879 -6454 lib/tools/nedx_type_input_division;
+#X obj -7213 -6550 cnv 15 105 80 empty empty empty 20 12 0 14 -120677
+-262144 0;
+#X obj -7205 -6533 hradio 18 1 0 5 gui_ft_sub_transp gui_ft_sub_transp_default
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X obj -7205 -6496 hradio 18 1 0 5 gui_ft_har_transp empty empty 0
+-8 0 10 -262144 -1 -1 0;
+#X text -7198 -6496 0 -1 -2 -3 -4;
+#X text -7198 -6533 0 +1 +2 +3 +4;
+#X obj -7205 -6544 cnv 10 1 1 empty empty SUBHARMONICS 0 5 1 11 -120677
+-262144 0;
+#X text -7106 -6520 >>>>;
+#X obj -7204 -6507 cnv 10 1 1 empty empty HARMONICS 0 5 1 11 -120677
+-262144 0;
+#X obj -7228 -6583 cnv 10 1 1 empty empty FUNDAMENTAL-TONE 0 5 1 18
+-203904 -1 0;
+#X obj -6965 -6583 cnv 10 1 1 empty empty select 0 5 1 18 -203904 -1
+0;
+#X obj -6909 -6583 cnv 10 1 1 empty empty [ft] 0 5 1 18 -203904 -48
+0;
+#X obj -7032 -6583 cnv 10 1 1 empty empty SCALE 0 5 1 18 -203904 -1
+0;
+#X obj -6890 -6555 cnv 15 150 135 empty empty empty 10 12 0 12 -124839
+-262144 0;
+#X obj -6844 -6497 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_unit_value
+empty -50 -12 1 12 -124839 -262144 -262144 0 256;
+#X obj -6844 -6453 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_division_value
+empty -70 -12 1 12 -124839 -262144 -262144 0 256;
+#X obj -6872 -6551 cnv 10 1 1 empty empty n 0 5 1 15 -120677 -260097
+0;
+#X obj -6857 -6551 cnv 10 1 1 empty empty Equal-Divisions 0 5 1 13
+-120677 -262144 0;
+#X obj -6862 -6537 cnv 10 1 1 empty empty of 0 5 1 13 -120677 -262144
+0;
+#X obj -6845 -6537 cnv 10 1 1 empty empty the 0 5 1 13 -120677 -262144
+0;
+#X obj -6822 -6537 cnv 10 1 1 empty empty Ratio 0 5 1 13 -120677 -262144
+0;
+#X obj -6786 -6537 cnv 10 1 1 empty empty x 0 5 1 15 -120677 -4034
+0;
+#X obj -6879 -6510 cnv 10 1 1 empty empty n-EDx 0 5 1 11 -120677 -262144
+0;
+#X obj -6844 -6510 cnv 10 1 1 empty empty UNIT 0 5 1 11 -120677 -262144
+0;
+#X obj -6813 -6510 cnv 10 1 1 empty empty input: 0 5 1 11 -120677 -262144
+0;
+#X obj -6781 -6511 cnv 10 1 1 empty empty x 0 5 1 13 -120677 -4034
+0;
+#X obj -6879 -6468 cnv 10 1 1 empty empty n-EDx 0 5 1 11 -120677 -262144
+0;
+#X obj -6844 -6468 cnv 10 1 1 empty empty DIVISION 0 5 1 11 -120677
+-262144 0;
+#X obj -6791 -6468 cnv 10 1 1 empty empty input: 0 5 1 11 -120677 -262144
+0;
+#X obj -6759 -6468 cnv 10 1 1 empty empty n 0 5 1 13 -120677 -260097
+0;
+#X obj -7324 -6683 cnv 15 86 206 empty empty empty 20 12 0 12 -228856
+-66577 0;
+#X obj -7314 -6632 vsl 15 128 0 127 0 0 gui_int_output_volume gui_int_output_volume_default
+empty 0 -9 0 10 -262144 -1 -1 0 1;
+#X obj -7291 -6628 vu 15 120 gui_vumeter empty -1 -8 0 10 -66577 -1
+1 0;
+#X floatatom -7314 -6501 5 0 0 0 - - -;
+#X text -7320 -6649 OUTPUT VOLUME;
+#X obj -6996 -6725 cnv 15 272 40 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj -6757 -6714 bng 20 250 50 0 gui_all_bang empty empty 17 7 0
+10 -4034 -1 -1;
+#X obj -7311 -6679 cnv 10 1 1 empty empty BUILT-IN 0 5 1 14 -228856
+-1 0;
+#X obj -7321 -6666 cnv 10 1 1 empty empty AUDIO 0 5 1 14 -228856 -1
+0;
+#X obj -7271 -6666 cnv 10 1 1 empty empty OUT 0 5 1 14 -228856 -1 0
+;
+#X obj -7080 -6643 lib/tools/fm_type_input;
+#X obj -7229 -6677 cnv 15 505 90 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj -7229 -6675 cnv 10 1 1 empty empty FUNDAMENTAL-MOTHER 0 5 1
+18 -261234 -1 0;
+#X obj -6955 -6675 cnv 10 1 1 empty empty [fm] 0 5 1 18 -261234 -176129
+0;
+#X obj -7218 -6645 vradio 18 1 0 2 gui_fm_method fm_input_bang empty
+0 -8 0 10 -262144 -1 -1 0;
+#X obj -6985 -6643 nbx 7 30 -1e+37 1e+37 0 0 empty fm_input_value empty
+-250 -18 1 20 -262144 -1 -1 0 256;
+#X obj -6821 -6633 cnv 10 1 1 empty gui_fm_midi 48 0 5 1 18 -261234
+-1 0;
+#X obj -6821 -6612 cnv 10 1 1 empty gui_fm_freq 130.813 0 5 1 18 -261234
+-1 0;
+#X text -6854 -6641 MIDI;
+#X text -6854 -6633 cent;
+#X text -6842 -6615 Hz;
+#X obj -6821 -6654 cnv 10 1 1 empty gui_fm_notename C3 0 5 1 18 -261234
+-1 0;
+#X text -6854 -6655 name;
+#X text -6854 -6663 note;
+#X obj -7003 -6675 cnv 10 1 1 empty empty input 0 5 1 18 -261234 -1
+0;
+#X text -7069 -6615 TYPE the value \, then press ENTER.;
+#X text -6800 -6500 RATIO;
+#X text -6802 -6490 INTERVAL;
+#X text -6800 -6457 EQUAL;
+#X text -6800 -6446 DIVISIONS;
+#X obj -6780 -6652 cnv 10 1 1 empty gui_fm_cents 0 0 5 1 14 -261234
+-1 0;
+#X text -6736 -6654 c;
+#X obj -6806 -6157 cnv 15 335 230 empty empty empty 10 12 0 18 -261682
+-258113 0;
+#X obj -6594 -6115 vradio 15 1 0 2 gui_midi_pitchbend_main_on-off gui_midi_pitchbend_main_chk
+ACTIVE 0 -8 0 10 -262144 -1 -1 0;
+#X text -6576 -6116 OFF;
+#X text -6576 -6100 ON;
+#X obj -6673 -6068 cnv 15 191 60 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj -6670 -6065 cnv 15 185 54 empty empty empty 20 12 0 14 -249200
+-66577 0;
+#X obj -6661 -6062 cnv 15 29 28 empty chn-full-count 0 4 12 1 20 -249200
+-4160 0;
+#X obj -6626 -6059 cnv 15 20 24 empty empty used 0 11 1 14 -249200
+-1 0;
+#X text -6668 -6039 CLICK TO SETUP >>;
+#X text -6662 -6029 MIDI CHANNELS >>;
+#X obj -6606 -5994 bng 15 250 50 0 gui_pitchbend_mode4_send empty empty
+17 7 0 10 -262144 -1 -1;
+#X text -6589 -6000 OMNI mode OFF;
+#X text -6589 -5990 MONO mode ON;
+#X obj -6586 -5951 hradio 15 1 0 2 gui_pitchbend_gmonoff_send empty
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text -6554 -5952 ON;
+#X text -6608 -5952 OFF;
+#N canvas 283 409 591 148 channels 0;
+#X obj 440 -303 lib/tools/gui_pitchbend_input_range-ft;
+#X obj 308 -304 lib/tools/gui_pitchbend_input_timing-ht;
+#X obj 440 -396 lib/tools/gui_pitchbend_input_range-ht;
+#X obj 308 -395 lib/tools/gui_pitchbend_input_timing-ht;
+#X obj 0 -410 cnv 15 500 144 empty empty empty 10 12 0 18 -261682 -258113
+0;
+#X obj 3 -308 cnv 11 3 3 empty empty CHANNELS 0 6 1 20 -261682 -66577
+0;
+#X obj 0 -365 cnv 15 54 54 empty chn-full-count 0 16 27 1 26 -1 -261234
+0;
+#X obj 260 -338 cnv 15 327 72 empty empty empty 10 12 0 18 -204800
+-258113 0;
+#X obj 260 -410 cnv 15 327 71 empty empty empty 10 12 0 18 -204786
+-258113 0;
+#X obj 114 -310 cnv 15 186 38 empty empty empty 5 18 1 18 -1 -66577
+0;
+#X obj 122 -310 cnv 15 170 30 empty chn-ft-count 0 5 12 1 18 -204800
+-66577 0;
+#X obj 165 -308 bng 15 250 50 0 chn-ft-all-on empty ALL-ON 17 7 0 10
+-262130 -1 -1;
+#X obj 228 -308 bng 15 250 50 0 chn-ft-all-off empty ALL-OFF 17 7 0
+10 -261234 -1 -1;
+#X obj 114 -404 cnv 15 186 38 empty empty empty 5 18 1 18 -1 -66577
+0;
+#X obj 122 -396 cnv 15 170 30 empty chn-ht-count 0 5 18 1 18 -204786
+-66577 0;
+#X obj 165 -383 bng 15 250 50 0 chn-ht-all-on empty ALL-ON 17 7 0 10
+-262130 -1 -1;
+#X obj 228 -383 bng 15 250 50 0 chn-ht-all-off empty ALL-OFF 17 7 0
+10 -261234 -1 -1;
+#X obj 154 -286 cnv 15 105 20 empty empty FUNDAMENTALS 5 10 0 14 -1
+-262144 0;
+#X obj 154 -410 cnv 15 105 20 empty empty HARMONICS 18 10 0 14 -1 -262144
+0;
+#X obj 12 -378 cnv 11 3 3 empty empty MIDI_OUT 0 6 1 20 -261682 -66577
+0;
+#X obj 55 -365 lib/gui/pitchbend-channel-selector;
+#X obj 432 -338 cnv 15 155 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 433 -337 cnv 15 153 70 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 493 -327 bng 15 250 50 0 gui_pitchbend_range_send-ft empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj 481 -302 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_range_value-ft
+empty -40 -8 1 14 -262144 -1 -1 2 256;
+#X obj 439 -279 cnv 10 15 10 empty empty PITCHBEND 0 5 1 10 -204800
+-66577 0;
+#X obj 500 -279 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204800 -66577
+0;
+#X obj 512 -324 cnv 10 15 10 empty empty SEND 0 5 1 10 -204800 -66577
+0;
+#X obj 542 -324 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204800 -66577
+0;
+#X obj 527 -298 cnv 10 15 10 empty empty (semitones) 0 5 1 10 -204800
+-66577 0;
+#X obj 300 -311 cnv 15 132 45 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 301 -310 cnv 15 130 43 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 349 -303 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_timing_value-ft
+empty -70 -8 1 14 -262144 -1 -1 5 256;
+#X obj 303 -279 cnv 10 15 10 empty empty PITCHBEND>NOTE 0 5 1 10 -204800
+-66577 0;
+#X obj 398 -279 cnv 10 15 10 empty empty DELAY 0 5 1 10 -204800 -66577
+0;
+#X obj 396 -296 cnv 10 15 10 empty empty (ms) 0 5 1 10 -204800 -66577
+0;
+#X obj 432 -410 cnv 15 155 71 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 433 -409 cnv 15 153 70 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 493 -362 bng 15 250 50 0 gui_pitchbend_range_send-ht empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj 481 -395 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_range_value-ht
+empty -40 -8 1 14 -262144 -1 -1 2 256;
+#X obj 440 -407 cnv 10 15 10 empty empty PITCHBEND 0 5 1 10 -204786
+-66577 0;
+#X obj 501 -407 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204786 -66577
+0;
+#X obj 512 -359 cnv 10 15 10 empty empty SEND 0 5 1 10 -204786 -66577
+0;
+#X obj 542 -359 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204786 -66577
+0;
+#X obj 527 -387 cnv 10 15 10 empty empty (semitones) 0 5 1 10 -204786
+-66577 0;
+#X obj 300 -410 cnv 15 132 44 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 301 -409 cnv 15 130 43 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 303 -407 cnv 10 15 10 empty empty PITCHBEND>NOTE 0 5 1 10 -204786
+-66577 0;
+#X obj 349 -394 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_timing_value-ht
+empty -70 -8 1 14 -262144 -1 -1 5 256;
+#X obj 398 -407 cnv 10 15 10 empty empty DELAY 0 5 1 10 -204786 -66577
+0;
+#X obj 396 -387 cnv 10 15 10 empty empty (ms) 0 5 1 10 -204786 -66577
+0;
+#X obj 355 -365 cnv 15 132 54 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 356 -337 cnv 15 130 25 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 405 -338 hradio 15 1 0 2 gui_pitchbend_stealing-ft gui_pitchbend_stealing-init
+empty 0 -8 0 10 -262144 -1 -1 1;
+#X text 437 -339 ON;
+#X text 384 -339 OFF;
+#X obj 365 -322 cnv 8 15 8 empty empty POLY 0 5 1 10 -204800 -66577
+0;
+#X obj 395 -322 cnv 8 10 8 empty empty VOICE 0 5 1 10 -204800 -66577
+0;
+#X obj 429 -322 cnv 8 15 8 empty empty STEALING 0 5 1 10 -204800 -66577
+0;
+#X obj 356 -364 cnv 15 130 25 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X text 437 -353 ON;
+#X obj 395 -364 cnv 10 15 10 empty empty VOICE 0 5 1 10 -204786 -66577
+0;
+#X obj 405 -353 hradio 15 1 0 2 gui_pitchbend_stealing-ht gui_pitchbend_stealing-init
+empty 0 -8 0 10 -262144 -1 -1 1;
+#X text 384 -353 OFF;
+#X obj 429 -364 cnv 9 15 9 empty empty STEALING 0 5 1 10 -204786 -66577
+0;
+#X obj 365 -364 cnv 10 15 10 empty empty POLY 0 5 1 10 -204786 -66577
+0;
+#X coords 0 148 1 147 85 60 0;
+#X restore -6559 -6032 pd channels;
+#X obj -6591 -6059 cnv 15 20 24 empty empty MIDI 0 11 1 14 -249200
+-1 0;
+#X obj -6558 -6059 cnv 15 20 24 empty empty Channels 0 11 1 14 -249200
+-1 0;
+#X obj -7324 -6400 cnv 10 1 1 empty empty FUNCTION 0 5 1 18 -228856
+-1 0;
+#X obj -7225 -6400 cnv 10 1 1 empty empty ROUTING: 0 5 1 18 -228856
+-1 0;
+#X obj -7129 -6400 cnv 10 1 1 empty empty keyboard/bank 0 5 1 18 -228856
+-1 0;
+#X obj -7002 -6400 cnv 10 1 1 empty empty maps 0 5 1 18 -228856 -1
+0;
+#X obj -6658 -6155 cnv 10 1 1 empty empty PITCH-BEND 0 5 1 18 -228856
+-258113 0;
+#X obj -6543 -6153 cnv 10 1 1 empty empty method 0 5 1 14 -228856 -258113
+0;
+#X obj -7325 -6084 cnv 15 508 157 empty empty empty 10 12 0 18 -261682
+-258113 0;
+#X obj -7122 -6067 vradio 15 1 0 5 gui_midi_sysex_method gui_midi_sysex_method_init
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X obj -7255 -5947 cnv 15 83 18 empty gui_sysex_name_value TheHarmonync
+0 7 0 14 -261682 -4160 0;
+#X obj -6931 -6002 hradio 15 1 0 2 gui_sysex_single_note gui_sysex_single_note_init
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X obj -6918 -6056 nbx 3 19 -1e+37 1e+37 0 0 empty gui_sysex_bank_value
+empty -38 -8 1 12 -261682 -1 -1 0 256;
+#X obj -7314 -6014 vradio 15 1 0 2 gui_midi_sysex_main_on-off gui_midi_sysex_main_chk
+ACTIVE 0 -8 0 10 -262144 -1 -1 0;
+#X text -7296 -6014 OFF;
+#X text -7296 -5999 ON;
+#X text -7001 -5946 127 = ALL DEVs;
+#X text -7122 -5947 0 = DEFAULT;
+#X text -6944 -6039 0 = DEFAULT;
+#X obj -7223 -6034 nbx 3 20 -1e+37 1e+37 0 0 empty gui_sysex_chanout_value
+empty -70 -12 1 14 -249200 -4160 -262144 1 256;
+#X obj -7250 -6034 knob 20 20 1 16 0 0 gui_sysex_chanout_input gui_sysex_chanout_init
+empty 0 -8 0 8 -262144 -258113 -1 0 1;
+#X obj -7136 -5977 cnv 8 1 1 empty empty PROGRAM 0 6 1 11 -261682 -1
+0;
+#X obj -7073 -5977 cnv 8 1 1 empty empty (0-127) 0 6 1 11 -261682 -1
+0;
+#X obj -7000 -5976 cnv 8 1 1 empty empty DEVICE 0 6 1 11 -261682 -1
+0;
+#X obj -6953 -5976 cnv 8 1 1 empty empty (0-127) 0 6 1 11 -261682 -1
+0;
+#X obj -6950 -6070 cnv 8 1 1 empty empty BANK 0 6 1 11 -261682 -1 0
+;
+#X obj -6913 -6069 cnv 8 1 1 empty empty (0-127) 0 6 1 11 -261682 -1
+0;
+#X obj -7252 -5993 cnv 8 1 1 empty empty TUNING 0 6 1 11 -261682 -1
+0;
+#X obj -7205 -5993 cnv 8 1 1 empty empty NAME 0 6 1 11 -261682 -1 0
+;
+#X text -7263 -5987 (16 ascii chars);
+#X obj -7261 -6048 cnv 8 1 1 empty empty MIDI-OUT 0 6 1 11 -261682
+-1 0;
+#X obj -7207 -6048 cnv 8 1 1 empty empty Channel 0 6 1 11 -261682 -1
+0;
+#X obj -7324 -6082 cnv 10 1 1 empty empty MTS-SysEx 0 5 1 18 -262130
+-258113 0;
+#X obj -7222 -6080 cnv 10 1 1 empty empty method 0 5 1 14 -228856 -258113
+0;
+#X obj -6865 -6157 cnv 15 180 230 empty empty empty 20 12 0 14 -258113
+-66577 0;
+#X obj -6854 -6146 cnv 10 1 1 empty empty MIDI-OUT 0 5 1 18 -258113
+-262144 0;
+#X obj -6763 -6146 cnv 10 1 1 empty empty TUNING 0 5 1 18 -258113 -262144
+0;
+#X obj -6864 -6125 cnv 15 178 197 empty empty empty 20 12 0 14 -260388
+-66577 0;
+#X obj -6856 -5951 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -6857 -6014 bng 15 250 50 0 gui_pitchbend_resetctrl_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6751 -6047 hradio 15 1 0 2 gui_pitchbend_localctrl_send empty
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text -6719 -6047 ON;
+#X text -6773 -6047 OFF;
+#X obj -6857 -5978 bng 15 250 50 0 gui_pitchbend_exprmax_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6857 -5996 bng 15 250 50 0 gui_pitchbend_chvolume_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6839 -6012 cnv 8 1 1 empty empty Reset-All-Controllers 0 6
+1 10 -260388 -1 0;
+#X obj -6743 -6012 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6838 -5993 cnv 8 1 1 empty empty Volume-to-Max 0 6 1 10 -260388
+-1 0;
+#X obj -6767 -5993 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6838 -5976 cnv 8 1 1 empty empty Expression-to-Max 0 6 1 10
+-260388 -1 0;
+#X obj -6751 -5976 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6837 -5949 cnv 8 1 1 empty empty SEND 0 6 1 10 -260388 -1 0
+;
+#X obj -6764 -6069 cnv 8 1 1 empty empty Local-Control 0 6 1 10 -260388
+-1 0;
+#X obj -6760 -6059 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6962 -5963 nbx 3 19 -1e+37 1e+37 0 0 empty gui_sysex_device_value
+empty -43 -8 1 12 -261682 -1 -1 127 256;
+#X obj -7092 -5964 nbx 3 19 -1e+37 1e+37 0 0 empty gui_sysex_program_value
+empty -51 -8 1 12 -261682 -1 -1 0 256;
+#X obj -7145 -6066 cnv 8 1 1 empty empty NRT: 0 6 1 10 -261682 -1 0
+;
+#X obj -7105 -6066 cnv 8 1 1 empty empty Bulk-Dump 0 6 1 10 -261682
+-1 0;
+#X obj -7145 -6050 cnv 8 1 1 empty empty NRT: 0 6 1 10 -261682 -1 0
+;
+#X obj -7105 -6050 cnv 8 1 1 empty empty Bulk-Dump 0 6 1 10 -261682
+-1 0;
+#X obj -7052 -6050 cnv 8 1 1 empty empty (Bank) 0 6 1 10 -261682 -1
+0;
+#X obj -7138 -6035 cnv 8 1 1 empty empty RT: 0 6 1 10 -261682 -1 0
+;
+#X obj -7105 -6035 cnv 8 1 1 empty empty Single-Note 0 6 1 10 -261682
+-1 0;
+#X obj -7049 -6035 cnv 8 1 1 empty empty Change 0 6 1 10 -261682 -1
+0;
+#X obj -7011 -6020 cnv 8 1 1 empty empty (Bank) 0 6 1 10 -261682 -1
+0;
+#X obj -7138 -6020 cnv 8 1 1 empty empty RT: 0 6 1 10 -261682 -1 0
+;
+#X obj -7105 -6020 cnv 8 1 1 empty empty Single-Note 0 6 1 10 -261682
+-1 0;
+#X obj -7049 -6020 cnv 8 1 1 empty empty Change 0 6 1 10 -261682 -1
+0;
+#X obj -7011 -6005 cnv 8 1 1 empty empty (Bank) 0 6 1 10 -261682 -1
+0;
+#X obj -7145 -6005 cnv 8 1 1 empty empty NRT: 0 6 1 10 -261682 -1 0
+;
+#X obj -7105 -6005 cnv 8 1 1 empty empty Single-Note 0 6 1 10 -261682
+-1 0;
+#X obj -7049 -6005 cnv 8 1 1 empty empty Change 0 6 1 10 -261682 -1
+0;
+#X obj -6806 -5949 cnv 8 1 1 empty empty 12-EDO 0 6 1 10 -260388 -1
+0;
+#X obj -6766 -5949 cnv 8 1 1 empty empty (A4:440Hz) 0 6 1 10 -260388
+-1 0;
+#X obj -7059 -6478 cnv 8 1 1 empty empty SCALA 0 6 1 10 -203904 -1
+0;
+#X obj -7023 -6478 cnv 8 1 1 empty empty files 0 6 1 10 -203904 -1
+0;
+#X obj -7059 -6463 cnv 8 1 1 empty empty TUN 0 6 1 10 -203904 -1 0
+;
+#X obj -7034 -6463 cnv 8 1 1 empty empty files 0 6 1 10 -203904 -1
+0;
+#X obj -7059 -6448 cnv 8 1 1 empty empty MTX 0 6 1 10 -203904 -1 0
+;
+#X obj -7034 -6448 cnv 8 1 1 empty empty files 0 6 1 10 -203904 -1
+0;
+#X obj -7059 -6433 cnv 8 1 1 empty empty LMSO 0 6 1 10 -203904 -1 0
+;
+#X obj -7027 -6433 cnv 8 1 1 empty empty files 0 6 1 10 -203904 -1
+0;
+#X text -7007 -6460 TODO !;
+#X obj -7059 -6523 cnv 8 1 1 empty empty HARM/SUBHARM 0 6 1 10 -183097
+-1 0;
+#X obj -6973 -6523 cnv 8 1 1 empty empty TRANSPOSED 0 6 1 10 -183097
+-1 0;
+#X obj -7059 -6508 cnv 8 1 1 empty empty HARM/SUBHARM 0 6 1 10 -183097
+-1 0;
+#X obj -6973 -6508 cnv 8 1 1 empty empty NATURAL 0 6 1 10 -183097 -1
+0;
+#X obj -7061 -6555 cnv 15 170 15 empty empty empty 20 12 0 14 -183097
+-66577 0;
+#X obj -7059 -6553 cnv 8 1 1 empty empty n-EDx 0 6 1 10 -183097 -1
+0;
+#X obj -7026 -6553 cnv 8 1 1 empty empty (Equal 0 6 1 10 -183097 -1
+0;
+#X obj -6993 -6553 cnv 8 1 1 empty empty Temperament) 0 6 1 10 -183097
+-1 0;
+#X text -6927 -6557 <<<<<;
+#X obj -7323 -6473 cnv 8 1 1 empty empty BUILT-IN 0 6 1 11 -162280
+-1 0;
+#X obj -7275 -6473 cnv 8 1 1 empty empty SYNTH 0 6 1 11 -162280 -1
+0;
+#X obj -7313 -6462 cnv 8 1 1 empty empty WAVEFORM 0 6 1 11 -162280
+-1 0;
+#X obj -7279 -6444 cnv 8 1 1 empty empty SINE 0 6 1 10 -162280 -1 0
+;
+#X obj -7279 -6429 cnv 8 1 1 empty empty SAW 0 6 1 10 -162280 -1 0
+;
+#X text -7202 -6250 Graph output ON/OFF;
+#X obj -6924 -6255 cnv 15 200 55 empty empty empty 20 12 0 14 -162280
+-66577 0;
+#X obj -7014 -6180 cnv 15 106 73 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj -7012 -6154 lib/gui/gui_cnv-oc_arrays;
+#X obj -7012 -6177 lib/gui/gui_cnv-oc_hstack;
+#X obj -7008 -6131 cnv 15 94 21 empty empty empty 20 8 1 12 -258113
+-228856 0;
+#X obj -6922 -6253 cnv 15 196 51 empty empty empty 20 12 0 14 -245500
+-66577 0;
+#X obj -6823 -6227 image lib/logo.gif;
+#X obj -6886 -6216 pddplink lib/credits-license.pd -text credits &
+license;
+#X obj -7195 -6642 cnv 8 1 1 empty empty MIDI 0 6 1 12 -261234 -1 0
+;
+#X obj -7167 -6642 cnv 8 1 1 empty empty NOTE 0 6 1 12 -261234 -1 0
+;
+#X obj -7131 -6642 cnv 8 1 1 empty empty (0-127) 0 6 1 12 -261234 -1
+0;
+#X obj -7196 -6623 cnv 8 1 1 empty empty FREQUENCY 0 6 1 12 -261234
+-1 0;
+#X obj -7118 -6623 cnv 8 1 1 empty empty (Hz) 0 6 1 12 -261234 -1 0
+;
+#X obj -7297 -6370 cnv 10 1 1 empty empty Load 0 5 1 12 -228856 -1
+0;
+#X obj -7179 -6370 cnv 10 1 1 empty empty MAP 0 5 1 12 -228856 -1 0
+;
+#X obj -7266 -6370 cnv 10 1 1 empty empty CONTROLLER 0 5 1 12 -228856
+-1 0;
+#X obj -7297 -6348 cnv 10 1 1 empty empty Load 0 5 1 12 -228856 -1
+0;
+#X obj -7183 -6348 cnv 10 1 1 empty empty MAP 0 5 1 12 -228856 -1 0
+;
+#X obj -7267 -6348 cnv 10 1 1 empty empty INSTRUMENT 0 5 1 12 -228856
+-1 0;
+#X obj -7321 -6331 cnv 9 1 1 empty empty NOTE_on_INST_MAP: 0 7 0 9
+-228856 -1 0;
+#X obj -7215 -6331 cnv 9 1 1 empty empty PitchBend_reads_as_RELATIVE_/_SysEx_reads_as_ABSOLUTE
+0 7 0 9 -228856 -1 0;
+#X obj -6953 -6015 cnv 8 1 1 empty empty SINGLE-NOTE 0 6 1 11 -261682
+-1 0;
+#X text -6901 -6002 Used;
+#X text -6953 -6003 All;
+#X obj -6647 -5992 cnv 8 1 1 empty empty Mode 0 6 1 11 -261682 -1 0
+;
+#X obj -6617 -5992 cnv 8 1 1 empty empty 4 0 6 1 11 -261682 -1 0;
+#X obj -6621 -5964 cnv 8 1 1 empty empty General 0 6 1 11 -261682 -1
+0;
+#X obj -6577 -5964 cnv 8 1 1 empty empty Midi 0 6 1 11 -261682 -1 0
+;
+#X obj -6553 -5964 cnv 8 1 1 empty empty (GM) 0 6 1 11 -261682 -1 0
+;
+#X obj -6651 -6075 cnv 15 150 15 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj -6643 -6072 cnv 10 1 1 empty empty MULTITIMBRAL 0 5 1 11 -191407
+-221249 0;
+#X obj -6559 -6072 cnv 10 1 1 empty empty ROUTING 0 5 1 11 -191407
+-208961 0;
+#X obj -7230 -6057 cnv 8 1 1 empty empty NOTE 0 6 1 11 -261682 -1 0
+;
+#X text -7231 -6665 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+;
+#X text -7326 -6390 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^;
+#X text -7327 -6071 ^^^^^^^^^^^^^^^^^^^^^^^^^;
+#X text -6659 -6145 ^^^^^^^^^^^^^^^^^^^^^^^^^^^;
+#X text -7140 -6390 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^;
+#X text -7230 -6573 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+;
+#X obj -6836 -6363 lib/tools/gui_ht-mult_ratio_input;
+#X obj -6846 -6402 cnv 15 122 80 empty empty empty 20 12 0 13 -204786
+-66577 0;
+#X obj -6784 -6359 bng 15 250 50 0 gui_ht-mult_decrement empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj -6748 -6359 bng 15 250 50 0 gui_ht-mult_increment empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj -6748 -6359 cnv 15 15 15 empty empty + 2 5 0 19 -232576 -66577
+0;
+#X obj -6784 -6359 cnv 15 15 15 empty empty - 2 6 0 19 -232576 -66577
+0;
+#X obj -6784 -6384 cnv 8 1 1 empty empty OCTAVES 0 6 1 11 -204786 -1
+0;
+#X obj -6834 -6384 cnv 8 1 1 empty empty RATIO 0 6 1 11 -204786 -1
+0;
+#X obj -6841 -6374 cnv 8 1 1 empty empty transpose 0 4 1 11 -204786
+-1 0;
+#X obj -6782 -6374 cnv 8 1 1 empty empty transpose 0 4 1 11 -204786
+-1 0;
+#X obj -6766 -6359 bng 15 250 50 0 gui_ht-mult_zero empty empty 17
+7 0 10 -262144 -1 -1;
+#X obj -6766 -6359 cnv 15 15 15 empty empty 0 3 7 0 14 -232576 -66577
+0;
+#X obj -6807 -6336 cnv 10 1 1 empty gui_ht-multiplyer_label 1 0 5 1
+18 -204786 -1 0;
+#X obj -6844 -6402 cnv 8 1 1 empty empty HARMONIC-TONES 0 6 1 13 -204786
+-1 0;
+#X text -6846 -6395 ^^^^^^^^^^^^^^^^^^^^;
+#X obj -7268 -6303 lib/tools/vk/virtual-keyboard;
+#X obj -7324 -6314 cnv 15 48 50 empty empty empty 20 12 0 14 -228856
+-66577 0;
+#X obj -6994 -6230 cnv 8 35 10 empty empty KEYBOARD 0 5 0 10 -228856
+-66577 0;
+#X obj -6991 -6220 cnv 8 35 10 empty empty MAPPING 0 5 0 10 -228856
+-66577 0;
+#X obj -6985 -6210 cnv 8 35 10 empty empty TOOLS 0 5 0 10 -228856 -66577
+0;
+#X text -7095 -6318 VIRTUAL MIDI KEYBOARD - CONTROLLER;
+#X text -7316 -6306 Color;
+#X text -7322 -6296 Palette;
+#X text -7325 -6316 KEYBOARD;
+#X obj -7313 -6281 pddplink lib/tools/vk/colorset_gui_popup.pd -text
+OPEN;
+#X text -6988 -6713 CLICK TO INITIALIZE THE PATCH ONLY >>;
+#X obj -6813 -6107 lib/tools/gui_midi_input_progchange;
+#X obj -6846 -6121 cnv 8 1 1 empty empty PROGRAM 0 6 1 11 -260388 -1
+0;
+#X obj -6735 -6121 cnv 8 1 1 empty empty (1-128) 0 6 1 11 -260388 -1
+0;
+#X obj -6785 -6121 cnv 8 1 1 empty empty CHANGE 0 6 1 11 -260388 -1
+0;
+#X obj -6778 -6107 nbx 3 19 -1e+37 1e+37 0 0 empty gui_midi_progchange_value
+empty -43 -8 1 12 -260388 -1 -1 0 256;
+#X obj -6803 -6072 cnv 8 1 1 empty empty OFF 0 6 1 9 -260388 -1 0;
+#X obj -6831 -6062 bng 30 250 50 0 gui_pitchbend_ch-noteoff_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6831 -6062 cnv 15 30 30 empty empty empty 20 12 0 14 -258113
+-66577 0;
+#X obj -6828 -6062 cnv 8 1 1 empty empty SOFT 0 6 1 9 -258113 -257985
+0;
+#X obj -6827 -6050 cnv 8 1 1 empty empty USED 0 6 1 8 -258113 -262144
+0;
+#X obj -6821 -6038 cnv 5 1 1 empty empty Ch. 0 2 1 8 -258113 -262144
+0;
+#X obj -6842 -6073 cnv 8 1 1 empty empty All 0 6 1 9 -260388 -1 0;
+#X obj -6830 -6073 cnv 8 1 1 empty empty Notes 0 6 1 9 -260388 -1 0
+;
+#X obj -6829 -6035 pddplink lib/tools/gui_hard-panic.pd -text HARD
+;
+#X obj -7005 -6129 harmonync_14.0;
+#X connect 68 0 70 0;

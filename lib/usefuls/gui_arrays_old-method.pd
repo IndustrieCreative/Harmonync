@@ -1,0 +1,118 @@
+#N canvas 256 54 961 434 10;
+#X obj 50 188 tabread ctrl_fn;
+#X obj 50 211 tabwrite ctrl_fn_gui;
+#X obj 50 124 uzi 256;
+#X obj 50 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 50 158 t a a;
+#X obj 234 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 234 189 tabread inst_fn;
+#X obj 234 212 tabwrite inst_fn_gui;
+#X obj 50 270 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 50 374 tabwrite ff_base_table_gui;
+#X obj 50 350 tabread ff_base_table;
+#X obj 242 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 242 374 tabwrite ff_table_gui;
+#X obj 242 349 tabread ff_table;
+#X obj 420 273 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 420 377 tabwrite hf_table_gui;
+#X obj 420 353 tabread hf_table;
+#X obj 571 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 571 355 tabread sf_table;
+#X obj 571 379 tabwrite sf_table_gui;
+#X obj 412 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 412 189 tabread inst_table;
+#X obj 412 213 tabwrite inst_table_gui;
+#X obj 728 271 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 728 352 tabread bulk-tuning-dump;
+#X obj 728 375 tabwrite bulk-tuning-dump_gui;
+#X obj 708 92 receive gui_arrays_refresh;
+#X obj 234 124 uzi 256;
+#X obj 234 158 t a a;
+#X obj 412 158 t a a;
+#X obj 412 124 uzi 384;
+#X obj 50 285 uzi 256;
+#X obj 50 319 t a a;
+#X obj 242 319 t a a;
+#X obj 242 285 uzi 195;
+#X obj 420 288 uzi 256;
+#X obj 420 322 t a a;
+#X obj 571 290 uzi 256;
+#X obj 571 324 t a a;
+#X obj 728 320 t a a;
+#X obj 50 141 - 1;
+#X obj 234 141 - 1;
+#X obj 412 141 - 1;
+#X obj 50 302 - 1;
+#X obj 242 302 - 1;
+#X obj 420 305 - 1;
+#X obj 571 307 - 1;
+#X obj 728 303 - 1;
+#X obj 756 12 bng 30 250 50 0 gui_arrays_refresh empty REFRESH_ALL
+-30 40 1 14 -257985 -1 -66577;
+#X obj 728 286 uzi 521;
+#X obj 724 61 cnv 15 50 30 empty empty to_check_arrays 0 6 1 14 -262144
+-66577 0;
+#X connect 0 0 1 0;
+#X connect 2 2 40 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 4 1 1 1;
+#X connect 5 0 27 0;
+#X connect 6 0 7 0;
+#X connect 8 0 31 0;
+#X connect 10 0 9 0;
+#X connect 11 0 34 0;
+#X connect 13 0 12 0;
+#X connect 14 0 35 0;
+#X connect 16 0 15 0;
+#X connect 17 0 37 0;
+#X connect 18 0 19 0;
+#X connect 20 0 30 0;
+#X connect 21 0 22 0;
+#X connect 23 0 49 0;
+#X connect 24 0 25 0;
+#X connect 26 0 3 0;
+#X connect 26 0 5 0;
+#X connect 26 0 20 0;
+#X connect 26 0 8 0;
+#X connect 26 0 11 0;
+#X connect 26 0 14 0;
+#X connect 26 0 17 0;
+#X connect 26 0 23 0;
+#X connect 27 2 41 0;
+#X connect 28 0 6 0;
+#X connect 28 1 7 1;
+#X connect 29 0 21 0;
+#X connect 30 2 22 1;
+#X connect 30 2 42 0;
+#X connect 31 2 43 0;
+#X connect 32 0 10 0;
+#X connect 32 1 9 1;
+#X connect 33 0 13 0;
+#X connect 33 1 12 1;
+#X connect 34 2 44 0;
+#X connect 35 2 45 0;
+#X connect 36 0 16 0;
+#X connect 36 1 15 1;
+#X connect 37 2 46 0;
+#X connect 38 0 18 0;
+#X connect 38 1 19 1;
+#X connect 39 0 24 0;
+#X connect 39 1 25 1;
+#X connect 40 0 4 0;
+#X connect 41 0 28 0;
+#X connect 42 0 29 0;
+#X connect 43 0 32 0;
+#X connect 44 0 33 0;
+#X connect 45 0 36 0;
+#X connect 46 0 38 0;
+#X connect 47 0 39 0;
+#X connect 49 2 47 0;

@@ -1,0 +1,124 @@
+#N canvas 128 78 591 148 10;
+#X obj 0 -240 cnv 15 500 144 empty empty empty 10 12 0 18 -261682 -258113
+0;
+#X obj 3 -138 cnv 11 3 3 empty empty CHANNELS 0 6 1 20 -261682 -66577
+0;
+#X obj 0 -195 cnv 15 54 54 empty chn-full-count 0 16 27 1 26 -1 -261234
+0;
+#X obj 260 -168 cnv 15 327 72 empty empty empty 10 12 0 18 -204800
+-258113 0;
+#X obj 260 -240 cnv 15 327 71 empty empty empty 10 12 0 18 -204786
+-258113 0;
+#X obj 114 -140 cnv 15 186 38 empty empty empty 5 18 1 18 -1 -66577
+0;
+#X obj 122 -140 cnv 15 170 30 empty chn-ft-count 0 5 12 1 18 -204800
+-66577 0;
+#X obj 165 -138 bng 15 250 50 0 chn-ft-all-on empty ALL-ON 17 7 0 10
+-262130 -1 -1;
+#X obj 228 -138 bng 15 250 50 0 chn-ft-all-off empty ALL-OFF 17 7 0
+10 -261234 -1 -1;
+#X obj 114 -234 cnv 15 186 38 empty empty empty 5 18 1 18 -1 -66577
+0;
+#X obj 122 -226 cnv 15 170 30 empty chn-ht-count 0 5 18 1 18 -204786
+-66577 0;
+#X obj 165 -213 bng 15 250 50 0 chn-ht-all-on empty ALL-ON 17 7 0 10
+-262130 -1 -1;
+#X obj 228 -213 bng 15 250 50 0 chn-ht-all-off empty ALL-OFF 17 7 0
+10 -261234 -1 -1;
+#X obj 154 -116 cnv 15 105 20 empty empty FUNDAMENTALS 5 10 0 14 -1
+-262144 0;
+#X obj 154 -240 cnv 15 105 20 empty empty HARMONICS 18 10 0 14 -1 -262144
+0;
+#X obj 12 -208 cnv 11 3 3 empty empty MIDI_OUT 0 6 1 20 -261682 -66577
+0;
+#X obj 432 -168 cnv 15 155 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 433 -167 cnv 15 153 70 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 493 -157 bng 15 250 50 0 gui_pitchbend_range_send-ft empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj 512 -154 cnv 10 15 10 empty empty SEND 0 5 1 10 -204800 -66577
+0;
+#X obj 542 -154 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204800 -66577
+0;
+#X obj 300 -141 cnv 15 132 45 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 301 -140 cnv 15 130 43 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 303 -109 cnv 10 15 10 empty empty PITCHBEND>NOTE 0 5 1 10 -204800
+-66577 0;
+#X obj 432 -240 cnv 15 155 71 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 433 -239 cnv 15 153 70 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 493 -192 bng 15 250 50 0 gui_pitchbend_range_send-ht empty empty
+17 7 0 10 -262144 -1 -1;
+#X obj 481 -225 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_range_value-ht
+empty -40 -8 1 14 -262144 -1 -1 0 256;
+#X obj 440 -237 cnv 10 15 10 empty empty PITCHBEND 0 5 1 10 -204786
+-66577 0;
+#X obj 501 -237 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204786 -66577
+0;
+#X obj 512 -189 cnv 10 15 10 empty empty SEND 0 5 1 10 -204786 -66577
+0;
+#X obj 542 -189 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204786 -66577
+0;
+#X obj 527 -217 cnv 10 15 10 empty empty (semitones) 0 5 1 10 -204786
+-66577 0;
+#X obj 300 -240 cnv 15 132 44 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 301 -239 cnv 15 130 43 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 303 -237 cnv 10 15 10 empty empty PITCHBEND>NOTE 0 5 1 10 -204786
+-66577 0;
+#X obj 349 -224 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_timing_value-ht
+empty -70 -8 1 14 -262144 -1 -1 0 256;
+#X obj 398 -237 cnv 10 15 10 empty empty DELAY 0 5 1 10 -204786 -66577
+0;
+#X obj 396 -217 cnv 10 15 10 empty empty (ms) 0 5 1 10 -204786 -66577
+0;
+#X obj 355 -195 cnv 15 132 54 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 356 -167 cnv 15 130 25 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X obj 405 -168 hradio 15 1 0 2 gui_pitchbend_stealing-ft gui_pitchbend_stealing-init
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text 437 -169 ON;
+#X text 384 -169 OFF;
+#X obj 365 -152 cnv 8 15 8 empty empty POLY 0 5 1 10 -204800 -66577
+0;
+#X obj 395 -152 cnv 8 10 8 empty empty VOICE 0 5 1 10 -204800 -66577
+0;
+#X obj 429 -152 cnv 8 15 8 empty empty STEALING 0 5 1 10 -204800 -66577
+0;
+#X obj 356 -194 cnv 15 130 25 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X text 437 -183 ON;
+#X obj 395 -194 cnv 10 15 10 empty empty VOICE 0 5 1 10 -204786 -66577
+0;
+#X obj 405 -183 hradio 15 1 0 2 gui_pitchbend_stealing-ht gui_pitchbend_stealing-init
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text 384 -183 OFF;
+#X obj 429 -194 cnv 9 15 9 empty empty STEALING 0 5 1 10 -204786 -66577
+0;
+#X obj 365 -194 cnv 10 15 10 empty empty POLY 0 5 1 10 -204786 -66577
+0;
+#X obj 55 -195 pitchbend-channel-selector;
+#X obj 308 -225 ../tools/gui_pitchbend_input_timing-ht;
+#X obj 440 -226 ../tools/gui_pitchbend_input_range-ht;
+#X obj 481 -132 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_range_value-ft
+empty -40 -8 1 14 -262144 -1 -1 0 256;
+#X obj 439 -109 cnv 10 15 10 empty empty PITCHBEND 0 5 1 10 -204800
+-66577 0;
+#X obj 500 -109 cnv 10 15 10 empty empty RANGE 0 5 1 10 -204800 -66577
+0;
+#X obj 527 -128 cnv 10 15 10 empty empty (semitones) 0 5 1 10 -204800
+-66577 0;
+#X obj 349 -133 nbx 3 19 -1e+37 1e+37 0 0 empty gui_pitchbend_timing_value-ft
+empty -70 -8 1 14 -262144 -1 -1 0 256;
+#X obj 398 -109 cnv 10 15 10 empty empty DELAY 0 5 1 10 -204800 -66577
+0;
+#X obj 396 -126 cnv 10 15 10 empty empty (ms) 0 5 1 10 -204800 -66577
+0;
+#X obj 308 -134 ../tools/gui_pitchbend_input_timing-ht;
+#X obj 440 -133 ../tools/gui_pitchbend_input_range-ft;

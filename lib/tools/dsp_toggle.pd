@@ -1,0 +1,51 @@
+#N canvas 361 144 500 406 10;
+#X obj 29 11 cnv 16 105 16 empty pddp_dsp_canvas Built-in 12 9 1 14
+-233017 -33289 0;
+#X obj 10 10 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET GLOBAL_PDDP_DSP_TOGGLE
+empty 1 8 1 9 -233017 -33289 -33289 0 1;
+#X obj 92 226 select 0 1;
+#X msg 125 248 76;
+#X msg 90 248 10;
+#X obj 91 56 route dsp;
+#X msg 11 190 \; pd dsp \$1;
+#X text 119 348 released under the GNU GPL;
+#X text 22 334 (C) Copyright 2005 Hans-Christoph Steiner <hans@at.or.at>
+;
+#X msg 119 189 \; GLOBAL_PDDP_DSP_TOGGLE set \$1;
+#X obj 204 123 float;
+#X obj 92 125 float;
+#X obj 91 35 receive pd;
+#X obj 204 21 receive GLOBAL_PDDP_DSP;
+#X obj 204 70 bang;
+#X msg 109 278 \; GLOBAL_PDDP_DSP_TOGGLE color \$1 12 12 \; pddp_dsp_canvas
+color \$1 12 12;
+#X obj 318 41 loadbang;
+#X obj 326 82 send GLOBAL_PDDP_DSP;
+#X obj 204 90 spigot 0;
+#X msg 290 65 1;
+#X obj 10 -16 r gui_dsp_all_on;
+#X obj 19 291 s init_signal;
+#X obj 87 11 cnv 16 30 16 empty pddp_dsp_canvas DSP 7 9 1 14 -233017
+-33289 0;
+#X connect 1 0 6 0;
+#X connect 1 0 11 0;
+#X connect 1 0 21 0;
+#X connect 2 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 15 0;
+#X connect 4 0 15 0;
+#X connect 5 0 11 0;
+#X connect 5 0 10 1;
+#X connect 10 0 9 0;
+#X connect 10 0 6 0;
+#X connect 11 0 9 0;
+#X connect 11 0 2 0;
+#X connect 12 0 5 0;
+#X connect 13 0 14 0;
+#X connect 14 0 18 0;
+#X connect 16 0 17 0;
+#X connect 16 0 19 0;
+#X connect 18 0 10 0;
+#X connect 19 0 18 1;
+#X connect 20 0 1 0;
+#X coords 0 -1 1 1 125 18 2 10 10;

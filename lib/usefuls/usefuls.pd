@@ -1,0 +1,35 @@
+#N canvas 68 31 581 388 10;
+#X obj 118 75 poly;
+#X obj 37 37 bag;
+#X obj 143 137 list;
+#X obj 93 137 zl;
+#X obj 217 130 realtime;
+#X obj 209 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 258 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 217 161 print;
+#X obj -70 122 sysexin;
+#X obj -5 120 spell;
+#X obj -24 154 serialize 16;
+#X obj 19 232 spigot;
+#X obj 100 236 oneshot;
+#X obj -35 68 change;
+#X obj -73 211 swap;
+#X obj -41 32 value;
+#X obj 187 31 tabread4;
+#X obj 216 208 qlist;
+#X obj 337 91 float2ascii;
+#X obj 352 121 pitch;
+#X obj 293 200 round_zero;
+#X floatatom 409 208 5 0 0 0 - - -;
+#X msg 408 239 set \$1;
+#X msg 407 270 6;
+#X obj 396 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 1;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;

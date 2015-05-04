@@ -1,0 +1,13 @@
+#N canvas 479 144 450 300 10;
+#X obj -7237 -5973 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text -7217 -5974 REAL-TIME;
+#X text -7217 -5959 NON REAL-TIME;
+#X obj -7117 -5954 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text -7097 -5939 SINGLE NOTES;
+#X text -7097 -5955 BULK DUMP;
+#X obj -7116 -5993 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text -7096 -5994 NON BANK;
+#X text -7096 -5979 BANK;

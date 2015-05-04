@@ -1,0 +1,13 @@
+#N canvas 909 161 450 300 10;
+#X obj 171 69 pitch;
+#X obj 147 175 xbendout;
+#X obj 245 180 bendout;
+#X floatatom 252 107 5 0 0 0 - - -;
+#X msg 254 46 -8192;
+#X msg 240 28 8191;
+#X msg 291 136 1;
+#X msg 108 27 16383;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 2 1;
