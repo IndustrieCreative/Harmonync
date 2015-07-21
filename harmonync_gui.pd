@@ -482,9 +482,8 @@ empty -51 -8 1 12 -261682 -1 -1 0 256;
 0;
 #X obj -7026 -6553 cnv 8 1 1 empty empty (Equal 0 6 1 10 -183097 -1
 0;
-#X obj -6993 -6553 cnv 8 1 1 empty empty Temperament) 0 6 1 10 -183097
+#X obj -6993 -6553 cnv 8 1 1 empty empty Temperaments) 0 6 1 10 -183097
 -1 0;
-#X text -6927 -6557 <<<<<;
 #X obj -7323 -6473 cnv 8 1 1 empty empty BUILT-IN 0 6 1 11 -162280
 -1 0;
 #X obj -7275 -6473 cnv 8 1 1 empty empty SYNTH 0 6 1 11 -162280 -1
@@ -633,5 +632,6 @@ empty 17 7 0 10 -262144 -1 -1;
 ;
 #X obj -6829 -6035 pddplink lib/tools/gui_hard-panic.pd -text HARD
 ;
-#X obj -7005 -6129 harmonync_14.0;
+#X obj -6990 -6129 harmonync;
+#X text -6922 -6557 <<<<;
 #X connect 68 0 70 0;
