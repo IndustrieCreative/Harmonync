@@ -1,16 +1,11 @@
-#N canvas 936 22 478 828 10;
+#N canvas 954 22 470 824 10;
+#X obj 135 171 image hstack-labels.gif;
 #X obj 266 -60 gui_hstack_colorer;
-#X obj -4 295 cnv 10 1 1 empty empty FUNDAMENTAL 10 5 2 28 -262144
--1 0;
-#X obj -4 127 cnv 10 1 1 empty empty HARMONICS 10 5 2 28 -262144 -1
-0;
-#X obj 223 133 image arrow-h.gif;
-#X obj 118 357 image arrow-v.gif;
 #X obj 0 400 cnv 15 270 360 empty empty empty 20 12 0 14 -1 -66577
 0;
 #X obj 5 405 cnv 15 260 350 empty empty empty 20 12 0 14 -203904 -66577
 0;
-#X obj 10 649 cnv 15 250 100 empty gui_ft-note_label 7 20 50 0 80 -99865
+#X obj 10 649 cnv 15 250 100 empty gui_ft-note_label 3 20 50 0 80 -99865
 -262144 0;
 #X obj 24 630 cnv 15 150 27 empty empty RELATIVE_TONE 5 12 0 18 -1
 -262144 0;
@@ -18,25 +13,25 @@
 22 -66577 -262144 0;
 #X obj 195 699 cnv 15 60 20 empty empty VELOCITY 3 10 0 11 -1 -262144
 0;
-#X obj 10 559 cnv 15 250 60 empty gui_ft-frequency_label 202.324 20
+#X obj 10 559 cnv 15 250 60 empty gui_ft-frequency_label 14.5676 20
 30 0 40 -228856 -66577 0;
 #X obj 205 559 cnv 15 55 60 empty empty Hz 5 30 0 40 -228856 -128992
 0;
 #X obj 54 540 cnv 15 160 27 empty empty FUND.FREQUENCY 5 12 0 18 -191407
 -1 0;
-#X obj 190 640 cnv 15 70 40 empty gui_ft-midicent_label 55.55 4 25
-0 15 -66577 -262144 0;
+#X obj 190 640 cnv 15 70 40 empty gui_ft-midicent_label 10 4 25 0 15
+-66577 -262144 0;
 #X obj 195 630 cnv 15 60 20 empty empty MIDIcent 3 10 0 11 -1 -262144
 0;
-#X obj 10 429 cnv 15 250 100 empty gui_ft_notename_label G\$3 20 50
-0 80 -86277 -261234 0;
+#X obj 10 429 cnv 15 250 100 empty gui_ft_notename_label A♯-1 10
+50 0 60 -86277 -261234 0;
 #X obj 46 410 cnv 15 110 27 empty empty NOTE_NAME 7 12 0 18 -1 -262144
 0;
-#X obj 190 420 cnv 15 70 40 empty gui_ft_cents_label -45 16 25 0 22
--66577 -261234 0;
+#X obj 190 420 cnv 15 70 40 empty gui_ft_cents_label 0 16 25 0 22 -66577
+-261234 0;
 #X obj 195 410 cnv 15 60 20 empty empty +/-CENTS 2 10 0 12 -1 -262144
 0;
-#X obj 190 489 cnv 15 70 40 empty gui_ft_interval_label 2 30 25 0 20
+#X obj 190 489 cnv 15 70 40 empty gui_ft_interval_label 0 30 25 0 20
 -66577 -261234 0;
 #X obj 195 479 cnv 15 60 20 empty empty Interval 3 10 0 11 -1 -262144
 0;
