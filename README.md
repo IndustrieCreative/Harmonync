@@ -2,7 +2,7 @@
 a Dynamic Harmonics Calculator
 
 ## What is this?
-The Harmonync is a platform that allow the user/musician to play the tones of the Harmonic Series and changing its fundamental tone in real-time.
+The Harmonync is a platform that allow the user/musician to play the Harmonic Series and changing its fundamental tone in real-time.
 Just like the overtone singers do with the [polyphonic overtone singing technique](https://www.youtube.com/watch?v=haz6W7p8xjM).
 The idea is to play a fundamental-variable harmonic series on electronic and electro-acoustical instruments retuned via MIDI and in real-time.
 The name come from the union of the words “Harmonic” and “Sync”.
@@ -18,7 +18,7 @@ The first release was developed with Pd-extended 0.43.4 for Mac OS X but it shou
 Note: Do not rename or move any other file inside the main folder. Move all files and folders together.
   
 ## How to use it?
-There is no guide at this moment, it is currently being drafted. There will be a video-guide as soon as possible.
+There is no guide at this moment, it is currently being drafted. A video-guide and a step-by-step tutorial will be released as soon as possible. Visit [harmonync.org](http://harmonync.org/) to get the latest updated infos and see the work in progress.
 For any questions you may ask at armonici.it [*at*] gmail [*dot*] com.
 
 ## First public document
@@ -26,7 +26,7 @@ The document "**A first look at THE HARMONYNC: A Dynamic Harmonics Calculator �
 
 ## License
 Harmonync – a Dynamic Harmonics Calculator
-Copyright (C), 2014-Today Walter Mantovani
+Copyright (C), 2013-Today Walter Mantovani
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
