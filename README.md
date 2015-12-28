@@ -22,7 +22,7 @@ There is no guide at this moment, it is currently being drafted. A video-guide a
 For any questions you may ask at armonici.it [*at*] gmail [*dot*] com.
 
 ## First public document
-The document "**A first look at THE HARMONYNC: A Dynamic Harmonics Calculator – Draft of Specifications and User Guide**" is available [here](http://harmonync.org/a_first_look_at_the_harmonync.pdf) and have the following DOI: [10.978.88940077/01](http://dx.doi.org/10.978.88940077/01)
+The document "**A first look at THE HARMONYNC: A Dynamic Harmonics Calculator – Draft of Specifications and User Guide**" is available [here](http://harmonync.org/a_first_look_at_the_harmonync.pdf) and has the following DOI: [10.978.88940077/01](http://dx.doi.org/10.978.88940077/01)
 
 ## License
 Harmonync – a Dynamic Harmonics Calculator
