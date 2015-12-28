@@ -59,7 +59,7 @@
 #X obj -7213 -6550 cnv 15 105 80 empty empty empty 20 12 0 14 -120677
 -262144 0;
 #X obj -7205 -6533 hradio 18 1 0 5 gui_ft_sub_transp gui_ft_sub_transp_default
-empty 0 -8 0 10 -262144 -1 -1 1;
+empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj -7205 -6496 hradio 18 1 0 5 gui_ft_har_transp empty empty 0
 -8 0 10 -262144 -1 -1 0;
 #X text -7198 -6496 0 -1 -2 -3 -4;
@@ -80,9 +80,9 @@ empty 0 -8 0 10 -262144 -1 -1 1;
 #X obj -6890 -6555 cnv 15 150 135 empty empty empty 10 12 0 12 -124839
 -262144 0;
 #X obj -6844 -6497 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_unit_value
-empty -50 -12 1 12 -124839 -262144 -262144 2 256;
+empty -50 -12 1 12 -124839 -262144 -262144 0 256;
 #X obj -6844 -6453 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_division_value
-empty -70 -12 1 12 -124839 -262144 -262144 12 256;
+empty -70 -12 1 12 -124839 -262144 -262144 0 256;
 #X obj -6872 -6551 cnv 10 1 1 empty empty n 0 5 1 15 -120677 -260097
 0;
 #X obj -6857 -6551 cnv 10 1 1 empty empty Equal-Divisions 0 5 1 13
@@ -114,7 +114,7 @@ empty -70 -12 1 12 -124839 -262144 -262144 12 256;
 #X obj -7324 -6683 cnv 15 86 206 empty empty empty 20 12 0 12 -228856
 -66577 0;
 #X obj -7314 -6632 vsl 15 128 0 127 0 0 gui_int_output_volume gui_int_output_volume_default
-empty 0 -9 0 10 -262144 -1 -1 1800 1;
+empty 0 -9 0 10 -262144 -1 -1 0 1;
 #X obj -7291 -6628 vu 15 120 gui_vumeter empty -1 -8 0 10 -66577 -1
 1 0;
 #X floatatom -7314 -6501 5 0 0 0 - - -;
@@ -129,36 +129,10 @@ empty 0 -9 0 10 -262144 -1 -1 1800 1;
 0;
 #X obj -7271 -6666 cnv 10 1 1 empty empty OUT 0 5 1 14 -228856 -1 0
 ;
-#X obj -7229 -6677 cnv 15 505 90 empty empty empty 20 12 0 14 -261234
--66577 0;
-#X obj -7229 -6675 cnv 10 1 1 empty empty FUNDAMENTAL-MOTHER 0 5 1
-18 -261234 -1 0;
-#X obj -6955 -6675 cnv 10 1 1 empty empty [fm] 0 5 1 18 -261234 -176129
-0;
-#X obj -7221 -6645 vradio 18 1 0 2 gui_fm_method fm_input_bang empty
-0 -8 0 10 -262144 -1 -1 0;
-#X obj -6988 -6643 nbx 7 30 -1e+37 1e+37 0 0 empty fm_input_value empty
--250 -18 1 18 -262144 -1 -1 48 256;
-#X obj -6831 -6633 cnv 10 1 1 empty gui_fm_midi 48 0 5 1 18 -261234
--1 0;
-#X obj -6831 -6612 cnv 10 1 1 empty gui_fm_freq 130.813 0 5 1 18 -261234
--1 0;
-#X text -6863 -6641 MIDI;
-#X text -6863 -6633 cent;
-#X text -6851 -6615 Hz;
-#X obj -6831 -6654 cnv 10 1 1 empty gui_fm_notename C3 0 5 1 18 -261234
--1 0;
-#X text -6863 -6655 name;
-#X text -6863 -6663 note;
-#X obj -7003 -6675 cnv 10 1 1 empty empty input 0 5 1 18 -261234 -1
-0;
-#X text -7072 -6615 TYPE the value \, then press ENTER.;
 #X text -6800 -6500 RATIO;
 #X text -6802 -6490 INTERVAL;
 #X text -6800 -6457 EQUAL;
 #X text -6800 -6446 DIVISIONS;
-#X obj -6781 -6652 cnv 10 1 1 empty gui_fm_cents 0 0 5 1 14 -261234
--1 0;
 #X obj -6806 -6157 cnv 15 335 230 empty empty empty 10 12 0 18 -261682
 -258113 0;
 #X obj -6594 -6115 vradio 15 1 0 2 gui_midi_pitchbend_main_on-off gui_midi_pitchbend_main_chk
@@ -371,44 +345,6 @@ empty 0 -8 0 8 -262144 -258113 -1 0 1;
 -258113 0;
 #X obj -7222 -6080 cnv 10 1 1 empty empty method 0 5 1 14 -228856 -258113
 0;
-#X obj -6865 -6157 cnv 15 180 230 empty empty empty 20 12 0 14 -258113
--66577 0;
-#X obj -6854 -6146 cnv 10 1 1 empty empty MIDI-OUT 0 5 1 18 -258113
--262144 0;
-#X obj -6763 -6146 cnv 10 1 1 empty empty TUNING 0 5 1 18 -258113 -262144
-0;
-#X obj -6864 -6125 cnv 15 178 197 empty empty empty 20 12 0 14 -260388
--66577 0;
-#X obj -6856 -5951 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj -6857 -6014 bng 15 250 50 0 gui_pitchbend_resetctrl_send empty
-empty 17 7 0 10 -262144 -1 -1;
-#X obj -6751 -6047 hradio 15 1 0 2 gui_pitchbend_localctrl_send empty
-empty 0 -8 0 10 -262144 -1 -1 0;
-#X text -6719 -6047 ON;
-#X text -6773 -6047 OFF;
-#X obj -6857 -5978 bng 15 250 50 0 gui_pitchbend_exprmax_send empty
-empty 17 7 0 10 -262144 -1 -1;
-#X obj -6857 -5996 bng 15 250 50 0 gui_pitchbend_chvolume_send empty
-empty 17 7 0 10 -262144 -1 -1;
-#X obj -6839 -6012 cnv 8 1 1 empty empty Reset-All-Controllers 0 6
-1 10 -260388 -1 0;
-#X obj -6743 -6012 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
--1 0;
-#X obj -6838 -5993 cnv 8 1 1 empty empty Volume-to-Max 0 6 1 10 -260388
--1 0;
-#X obj -6767 -5993 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
--1 0;
-#X obj -6838 -5976 cnv 8 1 1 empty empty Expression-to-Max 0 6 1 10
--260388 -1 0;
-#X obj -6751 -5976 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
--1 0;
-#X obj -6837 -5949 cnv 8 1 1 empty empty SEND 0 6 1 10 -260388 -1 0
-;
-#X obj -6764 -6069 cnv 8 1 1 empty empty Local-Control 0 6 1 10 -260388
--1 0;
-#X obj -6760 -6059 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
--1 0;
 #X obj -6962 -5963 nbx 3 19 -1e+37 1e+37 0 0 empty gui_sysex_device_value
 empty -43 -8 1 12 -261682 -1 -1 127 256;
 #X obj -7092 -5964 nbx 3 19 -1e+37 1e+37 0 0 empty gui_sysex_program_value
@@ -445,10 +381,6 @@ empty -51 -8 1 12 -261682 -1 -1 0 256;
 -1 0;
 #X obj -7049 -6005 cnv 8 1 1 empty empty Change 0 6 1 10 -261682 -1
 0;
-#X obj -6806 -5949 cnv 8 1 1 empty empty 12-EDO 0 6 1 10 -260388 -1
-0;
-#X obj -6766 -5949 cnv 8 1 1 empty empty (A4:440Hz) 0 6 1 10 -260388
--1 0;
 #X obj -7059 -6478 cnv 8 1 1 empty empty SCALA 0 6 1 10 -203904 -1
 0;
 #X obj -7023 -6478 cnv 8 1 1 empty empty files 0 6 1 10 -203904 -1
@@ -506,16 +438,6 @@ empty -51 -8 1 12 -261682 -1 -1 0 256;
 #X obj -6823 -6227 image lib/logo.gif;
 #X obj -6886 -6216 pddplink lib/credits-license.pd -text credits &
 license;
-#X obj -7198 -6642 cnv 8 1 1 empty empty MIDI 0 6 1 12 -261234 -1 0
-;
-#X obj -7170 -6642 cnv 8 1 1 empty empty NOTE 0 6 1 12 -261234 -1 0
-;
-#X obj -7134 -6642 cnv 8 1 1 empty empty (0-127) 0 6 1 12 -261234 -1
-0;
-#X obj -7199 -6623 cnv 8 1 1 empty empty FREQUENCY 0 6 1 12 -261234
--1 0;
-#X obj -7121 -6623 cnv 8 1 1 empty empty (Hz) 0 6 1 12 -261234 -1 0
-;
 #X obj -7297 -6370 cnv 10 1 1 empty empty Load 0 5 1 12 -228856 -1
 0;
 #X obj -7179 -6370 cnv 10 1 1 empty empty MAP 0 5 1 12 -228856 -1 0
@@ -552,8 +474,6 @@ license;
 #X obj -6559 -6072 cnv 10 1 1 empty empty ROUTING 0 5 1 11 -191407
 -208961 0;
 #X obj -7230 -6057 cnv 8 1 1 empty empty NOTE 0 6 1 11 -261682 -1 0
-;
-#X text -7231 -6665 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ;
 #X text -7326 -6390 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^;
 #X text -7327 -6071 ^^^^^^^^^^^^^^^^^^^^^^^^^;
@@ -600,6 +520,96 @@ license;
 OPEN;
 #X text -6988 -6713 CLICK TO INITIALIZE THE PATCH ONLY >>;
 #X obj -6813 -6107 lib/tools/gui_midi_input_progchange;
+#X obj -7015 -6125 harmonync;
+#X text -6922 -6557 <<<<;
+#X obj -7018 -6156 vradio 10 1 0 2 notename-mode empty empty 0 -8 0
+10 -262144 -1 -1 0;
+#X obj -7083 -6643 lib/tools/fm_type_input;
+#X text -7015 -6184 ENHARMONIC;
+#X text -7018 -6174 NOTE NAMING;
+#X text -7004 -6149 Relative;
+#X text -7004 -6161 Sharp (♯);
+#X obj -7003 -6675 cnv 10 1 1 empty empty input 0 5 1 18 -261234 -1
+0;
+#X obj -7229 -6677 cnv 15 505 90 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj -7229 -6675 cnv 10 1 1 empty empty FUNDAMENTAL-MOTHER 0 5 1
+18 -261234 -1 0;
+#X obj -6955 -6675 cnv 10 1 1 empty empty [fm] 0 5 1 18 -261234 -176129
+0;
+#X obj -7221 -6645 vradio 18 1 0 2 gui_fm_method fm_input_bang empty
+0 -8 0 10 -262144 -1 -1 0;
+#X obj -6988 -6643 nbx 7 30 -1e+37 1e+37 0 0 empty fm_input_value empty
+-250 -18 1 18 -262144 -1 -1 48 256;
+#X obj -6831 -6633 cnv 10 1 1 empty gui_fm_midi 48 0 5 1 18 -261234
+-1 0;
+#X obj -6831 -6612 cnv 10 1 1 empty gui_fm_freq 130.813 0 5 1 18 -261234
+-1 0;
+#X text -6863 -6641 MIDI;
+#X text -6863 -6633 cent;
+#X text -6851 -6615 Hz;
+#X obj -6831 -6654 cnv 10 1 1 empty gui_fm_notename C3 0 5 1 18 -261234
+-1 0;
+#X text -6863 -6655 name;
+#X text -6863 -6663 note;
+#X text -7072 -6615 TYPE the value \, then press ENTER.;
+#X obj -6781 -6652 cnv 10 1 1 empty gui_fm_cents 0 0 5 1 14 -261234
+-1 0;
+#X obj -7198 -6642 cnv 8 1 1 empty empty MIDI 0 6 1 12 -261234 -1 0
+;
+#X obj -7170 -6642 cnv 8 1 1 empty empty NOTE 0 6 1 12 -261234 -1 0
+;
+#X obj -7134 -6642 cnv 8 1 1 empty empty (0-127) 0 6 1 12 -261234 -1
+0;
+#X obj -7199 -6623 cnv 8 1 1 empty empty FREQUENCY 0 6 1 12 -261234
+-1 0;
+#X obj -7121 -6623 cnv 8 1 1 empty empty (Hz) 0 6 1 12 -261234 -1 0
+;
+#X text -7231 -6665 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+;
+#X text -6735 -6654 ¢;
+#X obj -6865 -6157 cnv 15 180 230 empty empty empty 20 12 0 14 -258113
+-66577 0;
+#X obj -6854 -6146 cnv 10 1 1 empty empty MIDI-OUT 0 5 1 18 -258113
+-262144 0;
+#X obj -6763 -6146 cnv 10 1 1 empty empty TUNING 0 5 1 18 -258113 -262144
+0;
+#X obj -6864 -6125 cnv 15 178 197 empty empty empty 20 12 0 14 -260388
+-66577 0;
+#X obj -6856 -5951 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -6857 -6014 bng 15 250 50 0 gui_pitchbend_resetctrl_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6751 -6047 hradio 15 1 0 2 gui_pitchbend_localctrl_send empty
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text -6719 -6047 ON;
+#X text -6773 -6047 OFF;
+#X obj -6857 -5978 bng 15 250 50 0 gui_pitchbend_exprmax_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6857 -5996 bng 15 250 50 0 gui_pitchbend_chvolume_send empty
+empty 17 7 0 10 -262144 -1 -1;
+#X obj -6839 -6012 cnv 8 1 1 empty empty Reset-All-Controllers 0 6
+1 10 -260388 -1 0;
+#X obj -6743 -6012 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6838 -5993 cnv 8 1 1 empty empty Volume-to-Max 0 6 1 10 -260388
+-1 0;
+#X obj -6767 -5993 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6838 -5976 cnv 8 1 1 empty empty Expression-to-Max 0 6 1 10
+-260388 -1 0;
+#X obj -6751 -5976 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6837 -5949 cnv 8 1 1 empty empty SEND 0 6 1 10 -260388 -1 0
+;
+#X obj -6764 -6069 cnv 8 1 1 empty empty Local-Control 0 6 1 10 -260388
+-1 0;
+#X obj -6760 -6059 cnv 8 1 1 empty empty (Used_Ch.) 0 6 1 10 -260388
+-1 0;
+#X obj -6806 -5949 cnv 8 1 1 empty empty 12-EDO 0 6 1 10 -260388 -1
+0;
+#X obj -6766 -5949 cnv 8 1 1 empty empty (A4:440Hz) 0 6 1 10 -260388
+-1 0;
 #X obj -6846 -6121 cnv 8 1 1 empty empty PROGRAM 0 6 1 11 -260388 -1
 0;
 #X obj -6735 -6121 cnv 8 1 1 empty empty (1-128) 0 6 1 11 -260388 -1
@@ -624,14 +634,4 @@ empty 17 7 0 10 -262144 -1 -1;
 ;
 #X obj -6829 -6035 pddplink lib/tools/gui_hard-panic.pd -text HARD
 ;
-#X obj -7015 -6125 harmonync;
-#X text -6922 -6557 <<<<;
-#X text -6735 -6654 ¢;
-#X obj -7018 -6156 vradio 10 1 0 2 notename-mode empty empty 0 -8 0
-10 -262144 -1 -1 1;
-#X obj -7083 -6643 lib/tools/fm_type_input;
-#X text -7015 -6184 ENHARMONIC;
-#X text -7018 -6174 NOTE NAMING;
-#X text -7004 -6149 Relative;
-#X text -7004 -6161 Sharp (♯);
 #X connect 68 0 70 0;
