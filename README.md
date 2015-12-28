@@ -1,4 +1,4 @@
-# ![Harmonync](http://harmonync.org/harmonync_logo.png "Harmonync - a Dynamic Harmonics Calculator")
+# ![Harmonync](http://harmonync.org/wp-content/uploads/harmonync_logo.png "Harmonync - a Dynamic Harmonics Calculator")
 a Dynamic Harmonics Calculator
 
 ## What is this?
