@@ -1,4 +1,4 @@
-#N canvas 45 22 873 818 10;
+#N canvas 128 22 873 818 10;
 #X obj -7332 -6733 cnv 15 870 814 empty empty empty 20 12 0 14 -66577
 -66577 0;
 #X obj -7324 -6402 cnv 15 470 80 empty empty empty 20 12 0 14 -233017
@@ -33,8 +33,8 @@
 #X obj -6996 -5964 lib/tools/gui_sysex_input_device;
 #X obj -7255 -5971 lib/tools/gui_sysex_input_name;
 #X obj -7126 -5965 lib/tools/gui_sysex_input_program;
-#X obj -7218 -6246 tgl 10 1 empty empty empty 0 -6 0 10 -1 -262144
--262144 1 1;
+#X obj -7218 -6246 tgl 10 1 gui_scope-switch empty empty 0 -6 0 10
+-1 -262144 -262144 0 1;
 #X obj -6952 -6057 lib/tools/gui_sysex_input_bank;
 #X obj -7318 -6373 bng 16 250 50 0 gui_load_ctrl_map empty empty 22
 9 1 13 -258113 -4034 -13381;
@@ -59,7 +59,7 @@
 #X obj -7213 -6550 cnv 15 105 80 empty empty empty 20 12 0 14 -120677
 -262144 0;
 #X obj -7205 -6533 hradio 18 1 0 5 gui_ft_sub_transp gui_ft_sub_transp_default
-empty 0 -8 0 10 -262144 -1 -1 0;
+empty 0 -8 0 10 -262144 -1 -1 1;
 #X obj -7205 -6496 hradio 18 1 0 5 gui_ft_har_transp empty empty 0
 -8 0 10 -262144 -1 -1 0;
 #X text -7198 -6496 0 -1 -2 -3 -4;
@@ -80,9 +80,9 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj -6890 -6555 cnv 15 150 135 empty empty empty 10 12 0 12 -124839
 -262144 0;
 #X obj -6844 -6497 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_unit_value
-empty -50 -12 1 12 -124839 -262144 -262144 0 256;
+empty -50 -12 1 12 -124839 -262144 -262144 2 256;
 #X obj -6844 -6453 nbx 3 20 -1e+37 1e+37 0 0 empty gui_nedx_division_value
-empty -70 -12 1 12 -124839 -262144 -262144 0 256;
+empty -70 -12 1 12 -124839 -262144 -262144 12 256;
 #X obj -6872 -6551 cnv 10 1 1 empty empty n 0 5 1 15 -120677 -260097
 0;
 #X obj -6857 -6551 cnv 10 1 1 empty empty Equal-Divisions 0 5 1 13
@@ -114,7 +114,7 @@ empty -70 -12 1 12 -124839 -262144 -262144 0 256;
 #X obj -7324 -6683 cnv 15 86 206 empty empty empty 20 12 0 12 -228856
 -66577 0;
 #X obj -7314 -6632 vsl 15 128 0 127 0 0 gui_int_output_volume gui_int_output_volume_default
-empty 0 -9 0 10 -262144 -1 -1 0 1;
+empty 0 -9 0 10 -262144 -1 -1 1800 1;
 #X obj -7291 -6628 vu 15 120 gui_vumeter empty -1 -8 0 10 -66577 -1
 1 0;
 #X floatatom -7314 -6501 5 0 0 0 - - -;
