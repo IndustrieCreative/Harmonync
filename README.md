@@ -18,7 +18,7 @@ The first release was developed with Pd-extended 0.43.4 for Mac OS X but it shou
 Note: Do not rename or move any other file inside the main folder. Move all files and folders together.
   
 ## How to use it?
-Visit [harmonync.org](http://harmonync.org/) for the **Tutorials**. There is no comprehensive guide at this moment, it is currently being drafted. A video-guide and a step-by-step tutorial will be released as soon as possible. For any questions you may ask at armonici.it[*at*]gmail[*dot*]com.
+Visit [harmonync.harmonicarium.org](https://harmonync.harmonicarium.org/) for the **Tutorials**. There is no comprehensive guide at this moment, it is currently being drafted. A video-guide and a step-by-step tutorial will be released as soon as possible. For any questions you may ask at armonici.it[*at*]gmail[*dot*]com.
 
 ## First public document
 The document "**A first look at THE HARMONYNC: A Dynamic Harmonics Calculator – Draft of Specifications and User Guide**" is available [here](http://harmonync.org/a_first_look_at_the_harmonync.pdf) and has the following DOI: [10.978.88940077/01](http://dx.doi.org/10.978.88940077/01)
